@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import HomePage from "./pages/HomePage";
@@ -10,9 +10,22 @@ import NewsPage from "./pages/NewsPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import ContactPage from "./pages/ContactPage";
 
-// 👇 IMPORT thêm cái này
 import FloatingContact from "./components/FloatingContact";
 
+
+// 🔥 SCROLL TO TOP (chuẩn xịn)
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+
+// 🔥 MOBILE REDIRECT
 function InitialMobileRedirect() {
   const navigate = useNavigate();
   const [ready, setReady] = useState(false);
@@ -36,28 +49,39 @@ function InitialMobileRedirect() {
   return <HomePage />;
 }
 
+
+// 🔥 ROUTES
 function AppRoutes() {
   return (
-    <Routes>
-      <Route path="/" element={<InitialMobileRedirect />} />
-      <Route path="/dich-vu" element={<ServicePage />} />
-      <Route path="/san-pham" element={<ProductsMenuPage />} />
-      <Route path="/san-pham/:category" element={<ProductsPage />} />
-      <Route path="/ky-thuat" element={<TechnicalPage />} />
-      <Route path="/tin-tuc" element={<NewsPage />} />
-      <Route path="/tin-tuc/:slug" element={<NewsDetailPage />} />
-      <Route path="/lien-he" element={<ContactPage />} />
-    </Routes>
+    <div className="page-transition">
+      <Routes>
+        <Route path="/" element={<InitialMobileRedirect />} />
+        <Route path="/dich-vu" element={<ServicePage />} />
+        <Route path="/san-pham" element={<ProductsMenuPage />} />
+        <Route path="/san-pham/:category" element={<ProductsPage />} />
+        <Route path="/ky-thuat" element={<TechnicalPage />} />
+        <Route path="/tin-tuc" element={<NewsPage />} />
+        <Route path="/tin-tuc/:slug" element={<NewsDetailPage />} />
+        <Route path="/lien-he" element={<ContactPage />} />
+      </Routes>
+    </div>
   );
 }
 
+
+// 🔥 APP
 function App() {
   return (
     <BrowserRouter>
+
+      {/* 👇 AUTO SCROLL */}
+      <ScrollToTop />
+
       <AppRoutes />
 
-      {/* 👇 NÚT ZALO + HOTLINE */}
+      {/* 👇 FLOATING CONTACT */}
       <FloatingContact />
+
     </BrowserRouter>
   );
 }
