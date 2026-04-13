@@ -12,7 +12,7 @@ function Footer() {
 
         <div>
           <h4>Thông tin</h4>
-          <p>Hotline: 0767188666</p>
+          <p>Hotline: 0767.188.666</p>
           <p>Email: hungphuelevator@gmail.com</p>
           <p>Địa chỉ: 43 Lê Văn Lương, Thanh Xuân, Hà Nội, Việt Nam</p>
         </div>

@@ -146,7 +146,7 @@ function ContactPage() {
                   <Headphones size={24} strokeWidth={1.8} />
                 </div>
                 <h3>Hỗ trợ kỹ thuật</h3>
-                <p>📞 0767188666</p>
+                <p>📞 0767.188.666</p>
                 <p>✉ hungphuelevator@gmail.com</p>
               </div>
 

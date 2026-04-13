@@ -1,4 +1,3 @@
-// components/ScrollToTop.jsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -6,7 +5,17 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // nhảy lên luôn (chuẩn web)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+
+    // 👇 FIX navbar fixed (cực quan trọng)
+    setTimeout(() => {
+      window.scrollBy(0, -80); // chỉnh theo chiều cao navbar
+    }, 0);
+
   }, [pathname]);
 
   return null;
