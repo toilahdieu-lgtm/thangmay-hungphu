@@ -1,0 +1,393 @@
+.service-page {
+  background: #f3f4f6;
+  color: #0b2342;
+}
+
+/* ================= HERO ================= */
+.service-hero {
+  position: relative;
+  height: 560px;
+  min-height: 560px;
+  overflow: hidden;
+  margin-top: 72px;
+}
+
+.service-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 23, 46, 0.78) 0%,
+    rgba(7, 23, 46, 0.5) 42%,
+    rgba(7, 23, 46, 0.18) 76%,
+    rgba(7, 23, 46, 0.06) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.service-hero-text {
+  max-width: 560px;
+  color: #fff;
+  padding: 48px 0 28px;
+}
+
+.service-hero-text > p:first-child {
+  color: #d7a14a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.service-hero-text h1 {
+  margin: 0;
+  max-width: 560px;
+  font-size: clamp(2.1rem, 4.2vw, 3.7rem);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.service-hero-text h1 span {
+  color: #8fb7ff;
+  font-weight: 600;
+}
+
+.service-hero-desc {
+  margin-top: 18px;
+  max-width: 480px;
+  color: #dbe3ee;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ================= FEATURES ================= */
+.service-features {
+  padding: 34px 0;
+}
+
+.service-feature-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.7fr 0.9fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.service-feature-card {
+  border-radius: 6px;
+  padding: 30px 24px;
+}
+
+.service-feature-card.light {
+  background: #ffffff;
+}
+
+.service-feature-card.light h2,
+.service-feature-card.dark h2 {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.service-feature-card.light p,
+.service-feature-card.dark p {
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.service-feature-card.light ul {
+  margin: 16px 0 22px;
+  padding-left: 18px;
+  color: #5f6a78;
+  line-height: 1.8;
+}
+
+.service-feature-card.light a {
+  color: #0b2342;
+  font-weight: 600;
+}
+
+.service-feature-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.service-feature-card.dark {
+  background: #062554;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-badge {
+  display: inline-block;
+  font-size: 11px;
+  color: #d7a14a;
+  border: 1px solid rgba(215, 161, 74, 0.4);
+  padding: 5px 10px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.service-time {
+  margin-top: 22px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #f5b14f;
+}
+
+.service-feature-card.dark small {
+  display: block;
+  margin-bottom: 16px;
+  color: #c7d3e2;
+}
+
+.service-feature-card.dark button {
+  margin-top: 8px;
+  height: 44px;
+  border: none;
+  background: #ffffff;
+  color: #062554;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================= PARTS ================= */
+.service-parts {
+  padding: 12px 0 50px;
+}
+
+.service-parts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.service-parts-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 260px;
+}
+
+.service-parts-content {
+  padding: 36px 28px;
+}
+
+.service-parts-content h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.service-parts-content p {
+  color: #5c6777;
+  line-height: 1.7;
+}
+
+.service-parts-boxes {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.service-parts-boxes div {
+  background: #f7f9fc;
+  padding: 14px;
+}
+
+.service-parts-boxes strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.service-parts-boxes p {
+  font-size: 12px;
+}
+
+/* ================= STANDARDS ================= */
+.service-standards {
+  padding: 34px 0 50px;
+}
+
+.service-standards h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.service-standard-desc {
+  color: #697486;
+  margin-bottom: 24px;
+}
+
+.service-standards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.standard-item {
+  border-top: 1px solid #d7e0eb;
+  padding-top: 16px;
+}
+
+.standard-item span {
+  font-size: 10px;
+  color: #7d8ba0;
+  letter-spacing: 1px;
+}
+
+.standard-item h3 {
+  margin: 10px 0 8px;
+  font-size: 26px;
+}
+
+.standard-item p {
+  color: #5c6777;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+/* ================= CTA ================= */
+.service-cta {
+  padding: 20px 0 60px;
+}
+
+.service-cta-box {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.service-cta-left {
+  background: #003c7b;
+  color: #fff;
+  padding: 40px 30px;
+}
+
+.service-cta-left h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.service-cta-left p {
+  color: #dce5ef;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.service-cta-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.orange-btn {
+  background: #b86b14;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.outline-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.service-cta-right {
+  background: #002d5d;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .service-feature-grid,
+  .service-parts-grid,
+  .service-cta-box,
+  .service-standards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero {
+    height: 460px;
+    min-height: 460px;
+  }
+
+  .service-hero-text {
+    max-width: 500px;
+    padding: 40px 0 24px;
+  }
+
+  .service-hero-text h1 {
+    max-width: 500px;
+    font-size: clamp(1.9rem, 5.8vw, 3.1rem);
+    line-height: 1.1;
+  }
+
+  .service-cta-left h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-hero {
+    height: 400px;
+    min-height: 400px;
+  }
+
+  .service-hero-text {
+    max-width: 100%;
+    padding: 32px 0 20px;
+  }
+
+  .service-hero-text h1 {
+    max-width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.6rem);
+    line-height: 1.12;
+  }
+
+  .service-hero-desc {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .service-parts-content,
+  .service-cta-left {
+    padding: 24px 18px;
+  }
+
+  .service-parts-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .service-cta-actions {
+    flex-direction: column;
+  }
+
+  .orange-btn,
+  .outline-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,223 @@
+.products-page {
+  background: #f5f5f7;
+  min-height: 100vh;
+}
+
+.products-container {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.products-category-header {
+  padding: 38px 0 28px;
+  background: linear-gradient(135deg, #55296f 0%, #ef7a45 100%);
+}
+
+.products-breadcrumb {
+  margin: 0 0 10px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.products-breadcrumb span {
+  margin: 0 8px;
+}
+
+.products-page-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.08;
+  color: #ffe400;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.products-page-desc {
+  margin: 14px 0 0;
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 17px;
+  line-height: 1.8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.products-list-section {
+  padding: 34px 0 72px;
+}
+
+.products-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.products-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.products-toolbar-left label {
+  font-size: 17px;
+  font-weight: 700;
+  color: #24364d;
+}
+
+.products-toolbar-left select {
+  height: 48px;
+  padding: 0 18px;
+  border: 1px solid #d6dde8;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* grid kiểu ảnh 3 */
+.products-grid.classic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.product-classic-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(22, 33, 52, 0.06);
+}
+
+.product-classic-image-wrap {
+  height: 260px;
+  overflow: hidden;
+  background: #f1f4f8;
+}
+
+.product-classic-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-classic-content {
+  padding: 18px 18px 22px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-classic-content h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #1d2f46;
+  font-weight: 700;
+}
+
+.product-classic-price {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #dd4343;
+}
+
+.product-btn-primary {
+  height: 46px;
+  min-width: 150px;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #0e356b 0%, #174789 100%);
+  color: #fff;
+  border: 1px solid #0e356b;
+  box-shadow: 0 10px 24px rgba(14, 53, 107, 0.18);
+}
+
+.product-btn-primary:hover {
+  background: linear-gradient(135deg, #174789 0%, #0e356b 100%);
+}
+
+.product-btn-primary.full {
+  width: 100%;
+  min-width: unset;
+}
+
+/* dropdown navbar */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown-trigger {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  min-width: 260px;
+  background: #fff6bf;
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(18, 33, 58, 0.16);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 16px 22px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav-dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown-menu a:hover {
+  background: rgba(255, 214, 0, 0.18);
+}
+
+@media (max-width: 1100px) {
+  .products-grid.classic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    width: calc(100% - 24px);
+  }
+
+  .products-grid.classic {
+    grid-template-columns: 1fr;
+  }
+
+  .products-toolbar {
+    align-items: flex-start;
+  }
+
+  .products-toolbar-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-dropdown-menu {
+    min-width: 220px;
+  }
+}

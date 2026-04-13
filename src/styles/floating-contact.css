@@ -1,0 +1,127 @@
+.floating-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+}
+
+/* ===== BUTTON CHUNG ===== */
+.floating-btn {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ===== FACEBOOK ===== */
+.floating-btn.facebook {
+  background: linear-gradient(135deg, #1877f2, #0d47a1);
+}
+
+.floating-btn.facebook img {
+  width: 26px;
+  height: 26px;
+  z-index: 2;
+}
+
+/* ===== ZALO ===== */
+.floating-btn.zalo {
+  background: linear-gradient(135deg, #007bff, #0052cc);
+}
+
+.floating-btn.zalo img {
+  width: 28px;
+  height: 28px;
+  z-index: 2;
+}
+
+/* ===== PHONE ===== */
+.floating-btn.phone {
+  background: linear-gradient(135deg, #082d5a, #0b4aa2);
+  color: #fff;
+}
+
+/* ===== GLOW ===== */
+.floating-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: pulse 2s infinite;
+  z-index: 0;
+}
+
+/* ===== RIPPLE ===== */
+.floating-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  animation: ripple 2s infinite;
+}
+
+/* ===== ICON TRÊN CÙNG ===== */
+.floating-btn > * {
+  z-index: 2;
+}
+
+/* ===== HOVER ===== */
+.floating-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .floating-contact {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .floating-btn {
+    width: 52px;
+    height: 52px;
+  }
+}
